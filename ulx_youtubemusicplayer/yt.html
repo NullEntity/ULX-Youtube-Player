@@ -67,11 +67,7 @@
 			loading();
 		}, time);
 	}
-</script>
-</head>
-<body leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
-
-<script type="text/javascript">
+	
 	var params = { allowScriptAccess: "always" };
 	var atts = { id: "myytplayer" };
 	var video_id = getURLParam( "v" );
@@ -96,6 +92,8 @@
 	swfobject.embedSWF("http://www.youtube.com/v/"+video_id+"?enablejsapi=1&playerapiid=myytplayer&version=3",
 						"myytplayer", "100%", "100%", "8", null, null, params, atts);
 </script>
+</head>
+<body leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
 <div id="title"> </div>
 <div id="start">0:00</div><progress id="duration" value="0" max="100"></div><div id="end">0:00</div>
 <div id="myytplayer"> </div>
