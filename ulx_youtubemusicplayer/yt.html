@@ -2,8 +2,14 @@
 <head>
 <title>YouTube player</title>
 <style type="text/css">
-.controls { display: inline-block; }
-#player_wrapper { display: none; }
+.controls { 
+	display: inline-block; 
+}
+
+#player_wrapper {
+	position: absolute; 
+	left: -999em; 
+}
 </style>
 <script type="text/javascript" src="swfobject.js"></script>
 <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
@@ -98,7 +104,7 @@
 	})();
 	
 	swfobject.embedSWF("http://www.youtube.com/v/"+video_id+"?enablejsapi=1&playerapiid=myytplayer&version=3",
-						"myytplayer", "100%", "100%", "8", null, null, params, atts);
+						"myytplayer", "1", "1", "8", null, null, params, atts);
 </script>
 </head>
 <body leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
