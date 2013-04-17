@@ -72,6 +72,9 @@
 		setInterval(function() {
 			loading();
 		}, time);
+		
+		$("#end").html(secondsToHMS(parseInt(json.entry.media$group.yt$duration.seconds)));
+		$("#title").html(json.entry.author[0].name.$t + " - " + json.entry.title.$t);
 	}
 	
 	var params = { allowScriptAccess: "always" };
@@ -92,8 +95,6 @@
 		});
 		return json;
 	})();
-	$("#end").html(secondsToHMS(parseInt(json.entry.media$group.yt$duration.seconds)));
-	$("#title").html(json.entry.author[0].name.$t + " - " + json.entry.title.$t);
 	
 	swfobject.embedSWF("http://www.youtube.com/v/"+video_id+"?enablejsapi=1&playerapiid=myytplayer&version=3",
 						"myytplayer", "100%", "100%", "8", null, null, params, atts);
