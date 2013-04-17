@@ -3,6 +3,7 @@
 <title>YouTube player</title>
 <style type="text/css">
 .controls { display: inline-block; }
+#myytplayer { display: hidden; }
 </style>
 <script type="text/javascript" src="swfobject.js"></script>
 <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
@@ -96,7 +97,7 @@
 		return json;
 	})();
 	
-	swfobject.embedSWF("http://www.youtube.com/v/"+video_id+"?enablejsapi=1&playerapiid=myytplayer&version=3&invis=1",
+	swfobject.embedSWF("http://www.youtube.com/v/"+video_id+"?enablejsapi=1&playerapiid=myytplayer&version=3",
 						"myytplayer", "100%", "100%", "8", null, null, params, atts);
 </script>
 </head>
