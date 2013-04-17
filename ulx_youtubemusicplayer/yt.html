@@ -58,7 +58,11 @@
 			value = bar.val();
 			
 		var loading = function() {
-			bar.val(Math.floor(parseInt(ytplayer.getCurrentTime())/parseFloat(ytplayer.getDuration())));
+			var current = parseInt(ytplayer.getCurrentTime());
+			var total = parseFloat(ytplayer.getDuration());
+			
+			console.log("Current: " + current + "    Total: " + total);
+			bar.val(Math.floor(current / total));
 			$('.duration-value').html(secondsToHMS(parseInt(ytplayer.getCurrentTime())));
 		};
 		
