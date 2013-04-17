@@ -58,7 +58,7 @@
 			value = bar.val();
 			
 		var loading = function() {
-			bar.val(floor(parseInt(ytplayer.getCurrentTime())/parseFloat(ytplayer.getDuration())));
+			bar.val(Math.floor(parseInt(ytplayer.getCurrentTime())/parseFloat(ytplayer.getDuration())));
 			$('.duration-value').html(secondsToHMS(parseInt(ytplayer.getCurrentTime())));
 		};
 		
