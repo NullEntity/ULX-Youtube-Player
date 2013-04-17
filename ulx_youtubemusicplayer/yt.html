@@ -1,6 +1,9 @@
 <html>
 <head>
 <title>YouTube player</title>
+<style type="text/css">
+.controls { display: inline-block; }
+</style>
 <script type="text/javascript" src="swfobject.js"></script>
 <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
@@ -61,7 +64,7 @@
 			var current = parseInt(ytplayer.getCurrentTime());
 			var total = parseFloat(ytplayer.getDuration());
 			
-			console.log("Current: " + current + "    Total: " + total);
+			$('#cur').html(secondsToHMS(current));
 			bar.val((current / total) * 100);
 			$('.duration-value').html(secondsToHMS(parseInt(ytplayer.getCurrentTime())));
 		};
@@ -98,7 +101,7 @@
 </head>
 <body leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
 <div id="title"> </div>
-<div id="start">0:00</div><progress id="duration" value="0" max="100"></progress><div id="end">0:00</div>
+<div id="cur" class="controls">0:00</div><progress id="duration" value="0" max="100 class="controls">progress><div id="end" class="controls">0:00</div>
 <div id="myytplayer"> </div>
 </body>
 </html>
