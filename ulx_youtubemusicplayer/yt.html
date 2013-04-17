@@ -94,11 +94,11 @@
 	$("title").html(json.entry.author[0].name.$t + " - " + json.entry.title.$t);
 	
 	swfobject.embedSWF("http://www.youtube.com/v/"+video_id+"?enablejsapi=1&playerapiid=ytplayer&version=3&invis=1",
-						"ytapiplayer", "100%", "100%", "8", null, null, params, atts);
+						"ytplayer", "100%", "100%", "8", null, null, params, atts);
 </script>
 <div id="title"> </div>
 <div id="start">0:00</div><progress id="duration" value="0" max="100"></div><div id="end">0:00</div>
-<div id="ytapiplayer" style="display: hidden"> </div>
+<div id="ytplayer" style="display: hidden"> </div>
 </body>
 </html>
 
