@@ -48,10 +48,9 @@
 	{
 		ytplayer = document.getElementById("myytplayer");
 		if ( volume_param != "" )
-		{
 			ytplayer.setVolume( volume_param )
-			ytplayer.playVideo();
-		}
+		
+		ytplayer.playVideo();
 		
 		var bar = $('#duration'),
 			max = bar.attr('max'),
