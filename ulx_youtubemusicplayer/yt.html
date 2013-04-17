@@ -42,7 +42,8 @@
 	else { quality = "default"; }
 
 	var volume_param = getURLParam( "volume" );
-
+	var ytplayer;
+	
 	function onYouTubePlayerReady( playerId )
 	{
 		ytplayer = document.getElementById("myytplayer");
