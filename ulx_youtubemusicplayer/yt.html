@@ -62,7 +62,7 @@
 			var total = parseFloat(ytplayer.getDuration());
 			
 			console.log("Current: " + current + "    Total: " + total);
-			bar.val(Math.floor(current / total));
+			bar.val(Math.floor(total / current));
 			$('.duration-value').html(secondsToHMS(parseInt(ytplayer.getCurrentTime())));
 		};
 		
