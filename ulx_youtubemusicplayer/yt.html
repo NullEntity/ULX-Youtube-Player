@@ -45,6 +45,7 @@
 
 	function onYouTubePlayerReady( playerId )
 	{
+		ytplayer = document.getElementById("myytplayer");
 		if ( volume_param != "" )
 		{
 			ytplayer.setVolume( volume_param )
@@ -93,12 +94,12 @@
 	$("end").html(secodsToHMS(json.entry.media$group.yt$duration.seconds));
 	$("title").html(json.entry.author[0].name.$t + " - " + json.entry.title.$t);
 	
-	swfobject.embedSWF("http://www.youtube.com/v/"+video_id+"?enablejsapi=1&playerapiid=ytplayer&version=3&invis=1",
-						"ytplayer", "100%", "100%", "8", null, null, params, atts);
+	swfobject.embedSWF("http://www.youtube.com/v/"+video_id+"?enablejsapi=1&playerapiid=myytplayer&version=3&invis=1",
+						"myytplayer", "100%", "100%", "8", null, null, params, atts);
 </script>
 <div id="title"> </div>
 <div id="start">0:00</div><progress id="duration" value="0" max="100"></div><div id="end">0:00</div>
-<div id="ytplayer" style="display: hidden"> </div>
+<div id="myytplayer" style="display: hidden"> </div>
 </body>
 </html>
 
