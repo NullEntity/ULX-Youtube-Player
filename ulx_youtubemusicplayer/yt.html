@@ -52,9 +52,7 @@
 			ytplayer.setVolume( volume_param )
 			ytplayer.playVideo();
 		}
-	}
-	
-	$(document).ready(function() {
+		
 		var bar = $('#duration'),
 			max = bar.attr('max'),
 			time = (1000/max)*5,	// update every .1s
@@ -68,7 +66,7 @@
 		setInterval(function() {
 			loading();
 		}, time);
-	});
+	}
 </script>
 </head>
 <body leftmargin="0px" topmargin="0px" marginwidth="0px" marginheight="0px">
